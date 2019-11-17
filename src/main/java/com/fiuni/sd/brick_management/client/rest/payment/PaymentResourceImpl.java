@@ -22,6 +22,7 @@ public class PaymentResourceImpl extends BaseResourceImpl<PaymentDTO> implements
     public PaymentResult getPayment() {
         return getWebResource().path("/" + 1 + "/" + 200).get(PaymentResult.class);
     }
+    @Override
     public FullPaymentDTO save(FullPaymentDTO fullpayment){
         return getWebResource().entity(fullpayment).post(FullPaymentDTO.class);
     }
