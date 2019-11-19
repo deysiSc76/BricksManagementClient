@@ -4,6 +4,8 @@ package com.fiuni.sd.brick_management.client.rest.charge;
 import com.fiuni.sd.brick_management.client.rest.base.BaseResourceImpl;
 import com.fiuni.sd.bricks_management.dto.charge.ChargeDTO;
 import com.fiuni.sd.bricks_management.dto.charge.ChargeResult;
+import com.sun.jersey.api.client.WebResource;
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.stereotype.Repository;
 
 @Repository("chargeResource")
@@ -31,6 +33,7 @@ public class ChargeResourceImpl extends BaseResourceImpl<ChargeDTO> implements I
         return getWebResource().path("/" + id).get(getDtoClass());
     }
 
-
 }
+}
+
 

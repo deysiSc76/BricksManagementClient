@@ -17,9 +17,6 @@ public class ProviderResourceImpl extends BaseResourceImpl<ProviderDTO> implemen
         return getWebResource().path("/" + page + "/" + 20).get(ProviderResult.class);
     }
 
-    @Override
-    public ProviderResult getProvider() {
-        return getWebResource().path("/" + 1 + "/" + 200).get(ProviderResult.class);
-    }
+
 }
 

@@ -7,7 +7,7 @@ import com.fiuni.sd.bricks_management.dto.user.UserDTO;
 import com.fiuni.sd.bricks_management.dto.user.UserResult;
 import org.springframework.stereotype.Repository;
 
-@Repository("UserResource")
+@Repository("userResource")
 public class UserResourceImpl extends BaseResourceImpl<UserDTO> implements IUserResource {
     public UserResourceImpl() {
         super(UserDTO.class, "/user");
