@@ -12,23 +12,23 @@ import com.fiuni.sd.bricks_management.dto.charge.ChargeDTO;
 import com.fiuni.sd.bricks_management.dto.provider.ProviderDTO;
 import com.fiuni.sd.bricks_management.dto.provider.ProviderResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+@Service("providerService")
 public class ProviderServiceImpl  extends BaseServiceImpl<ProviderB, ProviderDTO> implements IProviderService {
     @Autowired
     private IProviderResource providerResource;
 
+
     @Override
-    @Transactional
     public ProviderB save(ProviderB bean) {
-        final ProviderDTO dto = convertBeanToDto(bean);
-        final ProviderDTO providerDTO = providerResource.save(dto);
-        return convertDtoToBean(providerDTO);
+        ProviderDTO dto = providerResource.save(convertBeanToDto(bean));
+        return convertDtoToBean(dto);
     }
 
     protected ProviderB convertDtoToBean(ProviderDTO dto) {
@@ -75,5 +75,9 @@ public class ProviderServiceImpl  extends BaseServiceImpl<ProviderB, ProviderDTO
         dto.setNumber(bean.getNumber());
         dto.setRuc(bean.getRuc());
         return dto;
+    }
+    @Override
+    public void delete(int id) {
+        providerResource.delete(id);
     }
 }

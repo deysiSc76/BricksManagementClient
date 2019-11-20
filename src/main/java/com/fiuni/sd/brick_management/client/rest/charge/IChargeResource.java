@@ -8,4 +8,6 @@ import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 public interface IChargeResource extends IBaseResource<ChargeDTO> {
 
     public ChargeResult getAll(Integer page);
+    public ChargeResult getByDate(String date, Integer page);
+    public void delete(Integer id);
 }

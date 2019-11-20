@@ -23,17 +23,19 @@ public class ChargeResourceImpl extends BaseResourceImpl<ChargeDTO> implements I
     public ChargeResult getAll(Integer page) {
         return getWebResource().path("/" + page + "/" + 20).get(ChargeResult.class);
     }
-
     @Override
-    public ChargeResult getCharges() {
-        return getWebResource().path("/" + 1 + "/" + 200).get(ChargeResult.class);
+    public ChargeResult getByDate(String date, Integer page) {
+        return getWebResource().path("/by-date/" + date + "/" + page + "/").get(ChargeResult.class);
     }
+    @Override
+    public void delete(Integer id) {
+        getWebResource().path("/" + id).delete();
+    }
+
     @Override
     public ChargeDTO getById(Integer id) {
         return getWebResource().path("/" + id).get(getDtoClass());
     }
-
-}
 }
 
 

@@ -15,4 +15,8 @@ public class PersonalDebtResourceImpl extends BaseResourceImpl<PersonalDebtDTO> 
     public PersonalDebtResult getAll(Integer page) {
         return getWebResource().path("/" + page + "/" + 20).get(PersonalDebtResult.class);
     }
+    @Override
+    public void delete(Integer id) {
+        getWebResource().path("/" + id).delete();
+    }
 }

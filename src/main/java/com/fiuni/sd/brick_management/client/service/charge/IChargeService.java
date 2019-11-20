@@ -6,9 +6,9 @@ import com.fiuni.sd.bricks_management.dto.charge.ChargeDTO;
 import com.fiuni.sd.bricks_management.dto.charge.ChargeResult;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 
-public interface IChargeService extends IBaseService<ChargeB, ChargeDTO> {
-    public ChargeDTO update(ChargeDTO dto, Integer id);
+import java.util.List;
 
-    public ChargeResult getByDate(String date, SpringDataWebProperties.Pageable pageable);
+public interface IChargeService extends IBaseService<ChargeB, ChargeDTO> {
+    public List<ChargeB> getByDate(String date, Integer page);
 }
 

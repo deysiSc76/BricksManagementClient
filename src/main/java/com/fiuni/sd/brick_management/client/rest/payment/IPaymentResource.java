@@ -9,4 +9,5 @@ public interface IPaymentResource extends IBaseResource<PaymentDTO> {
     public PaymentResult getAll(Integer page);
     public PaymentResult getPayment();
     public FullPaymentDTO save(FullPaymentDTO fullpayment);
+    public FullPaymentDTO getFullById(Integer id);
 }

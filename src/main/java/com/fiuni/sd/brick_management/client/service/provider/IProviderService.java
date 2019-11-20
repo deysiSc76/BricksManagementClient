@@ -7,7 +7,7 @@ import com.fiuni.sd.bricks_management.dto.provider.ProviderResult;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 
 public interface IProviderService extends IBaseService<ProviderB, ProviderDTO> {
-
+    public void delete(int id);
 
 
 }

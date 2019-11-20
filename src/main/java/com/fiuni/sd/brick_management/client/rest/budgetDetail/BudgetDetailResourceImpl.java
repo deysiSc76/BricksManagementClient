@@ -16,8 +16,7 @@ public class BudgetDetailResourceImpl extends BaseResourceImpl<BudgetDetailDTO> 
         return getWebResource().path("/" + page + "/" + 20).get(BudgetDetailResult.class);
     }
     @Override
-
-    public BudgetDetailResult getBudgetDetail() {
-        return getWebResource().path("/" + 1 + "/" + 200).get(BudgetDetailResult.class);
+    public void delete(Integer id) {
+        getWebResource().path("/" + id).delete();
     }
 }

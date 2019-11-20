@@ -7,6 +7,6 @@ import com.fiuni.sd.bricks_management.dto.budgetDetail.BudgetDetailResult;
 
 public interface IBudgetDetailResource extends IBaseResource<BudgetDetailDTO> {
     public BudgetDetailResult getAll(Integer page);
-    public BudgetDetailResult getBudgetDetail();
+    public void delete(Integer id);
 }
 

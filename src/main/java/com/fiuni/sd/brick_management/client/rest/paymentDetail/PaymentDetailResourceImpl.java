@@ -15,8 +15,9 @@ public class PaymentDetailResourceImpl extends BaseResourceImpl<PaymentDetailDTO
     public PaymentDetailResult getAll(Integer page) {
         return getWebResource().path("/" + page + "/" + 20).get(PaymentDetailResult.class);
     }
+
     @Override
-    public PaymentDetailResult getPaymentDetail() {
-        return getWebResource().path("/" + 1 + "/" + 200).get(PaymentDetailResult.class);
+    public void delete(Integer id) {
+        getWebResource().path("/" + id).delete();
     }
 }

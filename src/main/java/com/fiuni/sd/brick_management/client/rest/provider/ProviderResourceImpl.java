@@ -16,6 +16,10 @@ public class ProviderResourceImpl extends BaseResourceImpl<ProviderDTO> implemen
     public ProviderResult getAll(Integer page) {
         return getWebResource().path("/" + page + "/" + 20).get(ProviderResult.class);
     }
+    @Override
+    public void delete(Integer id) {
+        getWebResource().path("/" + id).delete();
+    }
 
 
 }

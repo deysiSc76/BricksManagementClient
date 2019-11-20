@@ -8,4 +8,5 @@ import com.fiuni.sd.bricks_management.dto.provider.ProviderResult;
 public interface IProviderResource extends IBaseResource<ProviderDTO> {
 
     public ProviderResult getAll(Integer page);
+    public void delete(Integer id);
 }

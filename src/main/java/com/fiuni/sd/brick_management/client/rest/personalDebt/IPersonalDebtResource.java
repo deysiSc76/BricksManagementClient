@@ -7,5 +7,6 @@ import com.fiuni.sd.bricks_management.dto.personalDebt.PersonalDebtResult;
 
 public interface IPersonalDebtResource extends IBaseResource<PersonalDebtDTO> {
     public PersonalDebtResult getAll(Integer page);
+    public void delete(Integer id);
 
 }
