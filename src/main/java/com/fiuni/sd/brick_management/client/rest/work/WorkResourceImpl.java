@@ -14,4 +14,8 @@ public class WorkResourceImpl extends BaseResourceImpl<WorkDTO> implements IWork
     public WorkResult getAll(Integer page) {
         return getWebResource().path("/" + page + "/" + 20).get(WorkResult.class);
     }
+    @Override
+    public void delete(Integer id) {
+        getWebResource().path("/" + id).delete();
+    }
 }

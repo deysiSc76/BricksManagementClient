@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository("userResource")
 public interface IUserResource  extends IBaseResource<UserDTO> {
     public UserResult getAll(Integer page);
+    public void delete(Integer id);
 }

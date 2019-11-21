@@ -13,4 +13,8 @@ public class BudgetConceptResourceImpl extends BaseResourceImpl<BudgetConceptDTO
     public BudgetConceptResult getAll(Integer page) {
         return getWebResource().path("/" + page + "/" + 20).get(BudgetConceptResult.class);
     }
+    @Override
+    public void delete(Integer id) {
+        getWebResource().path("/" + id).delete();
+    }
 }

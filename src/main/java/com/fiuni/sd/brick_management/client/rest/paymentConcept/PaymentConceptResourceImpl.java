@@ -14,4 +14,8 @@ public class PaymentConceptResourceImpl extends BaseResourceImpl<PaymentConceptD
     public PaymentConceptResult getAll(Integer page) {
         return getWebResource().path("/" + page + "/" + 20).get(PaymentConceptResult.class);
     }
+    @Override
+    public void delete(Integer id) {
+        getWebResource().path("/" + id).delete();
+    }
 }

@@ -16,4 +16,8 @@ public class UserResourceImpl extends BaseResourceImpl<UserDTO> implements IUser
     public UserResult getAll(Integer page) {
         return getWebResource().path("/" + page + "/" + 20).get(UserResult.class);
     }
+    @Override
+    public void delete(Integer id) {
+        getWebResource().path("/" + id).delete();
+    }
 }

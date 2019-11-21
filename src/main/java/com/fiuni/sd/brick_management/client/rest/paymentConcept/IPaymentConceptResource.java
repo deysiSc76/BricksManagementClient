@@ -8,4 +8,5 @@ import com.fiuni.sd.bricks_management.dto.paymentConcept.PaymentConceptResult;
 
 public interface IPaymentConceptResource extends IBaseResource<PaymentConceptDTO> {
     public PaymentConceptResult getAll(Integer page);
+    public void delete(Integer id);
 }

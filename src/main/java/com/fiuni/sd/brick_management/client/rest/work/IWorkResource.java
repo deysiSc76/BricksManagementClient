@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository("workResource")
 public interface IWorkResource extends IBaseResource<WorkDTO> {
     public WorkResult getAll(Integer page);
+    public void delete(Integer id);
 }
